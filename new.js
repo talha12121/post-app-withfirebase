@@ -56,7 +56,7 @@ const firebaseConfig = {
                   name: docSnap.data().name,
                   post : textarea.value,
                   TimeStamp :new Date(),
-                  // url:docSnap.data().url,
+                  url:docSnap.data().url,
                   // url:url,
                 });
                 console.log("Document written with ID: ", docRef.id);
@@ -99,8 +99,8 @@ const firebaseConfig = {
             <div class="js-post">
             <div class="title">
             <div class="js-sec">
-            <div class="time">        
-            
+            <div class="time">       
+            <img  src="${doc.data().url}" style="width:50px; height:50px; background-size:cover; border-radius:60%; border:2px solid gray;"  >
             <p class="js-name">${doc.data().name}</p>
             </div>
             </div>
