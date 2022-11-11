@@ -14,6 +14,7 @@ import {
      addDoc,
      orderBy,
      onSnapshot,
+     where
     }  from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -71,7 +72,7 @@ const firebaseConfig = {
         }})
         
 
-        users.addEventListener("click",async()=>{
+        users.addEventListener("click",async(users)=>{
           frndz.innerHTML=""
             const q = query(collection(db, "users"));         
             const querySnapshot = await getDocs(q);

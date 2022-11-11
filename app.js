@@ -66,7 +66,7 @@ createUserWithEmailAndPassword(auth, signup_email.value, signup_pass.value)
           console.log("Upload is " + progress + "% done");
 
           if(progress==100){
-            swal("Account Successfully Created!", "", "success");
+            swal.fire("Account Successfully Created!", "", "success");
           }
           
          
