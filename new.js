@@ -120,4 +120,10 @@ const firebaseConfig = {
       });
     
 
-     
+      const logOut = document.getElementById("log"); 
+      logOut.addEventListener('click', e => {
+        e.preventDefault();
+         auth.signOut();
+         window.location="index.html"
+        console.log('User signed out!');
+})
